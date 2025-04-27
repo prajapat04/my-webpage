@@ -15,3 +15,14 @@ p {
     color: #555;
     font-size: 18px;
 }
+button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #3498db;
+}
