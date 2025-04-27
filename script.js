@@ -24,3 +24,27 @@ function displaySkillsOnPage() {
     }
 }
 displaySkillsOnPage();  // Call the function to display on the page
+
+//stoage data of form in localstorage
+document.getElementById("userForm").addEventListener("submit", function(event){
+    event.preventDefault();
+
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+
+localStorage.setItem("userName", name);
+localStorage.setItem("userEmail", email);
+
+alert("your info has been saved!");
+});
+
+window.onload = function() {
+    let cname = localStorage.getItem("userName");
+    let email = localStorage.getItem("userEmail");
+
+
+if (cname && email){
+    document.getElementById("savedInfo").innerHTML = `Name: ${cname} <br> Email: ${email}`;
+}
+};
