@@ -1,6 +1,9 @@
 body {
     background-color: #f0f8ff;
     font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 h1 {
@@ -87,6 +90,16 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
 }
 
 @media (max-width: 600px) {
