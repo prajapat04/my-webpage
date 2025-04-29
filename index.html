@@ -8,9 +8,14 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
+       <ul> <a href="index.html">Home</a> 
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+      </ul>
+        <div class="menu-toggle" id="menuToggle">
+          ☰
+        </div>
+        
     </nav>
     <main>
     <h1>Hello I am Amit</h1>
@@ -92,7 +97,7 @@
       </footer>
 
    <script src="script.js"></script>
-   <button id="scrollTopBtn" title="Go to top">⬆️</button>
+   <button id="scrollTopBtn" title="Go to top" aria-label="Scroll to top">⬆️</button>
    <script>
     let scrollTopBtn = document.getElementById("scrollTopBtn");
   
@@ -110,7 +115,15 @@
       document.body.scrollTop = 0; 
       document.documentElement.scrollTop = 0; 
     });
+ 
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('nav ul');
+  
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
   </script>
+  
   
 
 </body>
