@@ -282,11 +282,14 @@ main {
     font-size: 30px;
     cursor: pointer;
     padding: 10px;
+    align-self: center;
+
   }
   nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
+    transition: all 0.3s ease-in-out;
   }
   
   
@@ -318,13 +321,13 @@ main {
       align-items: center;
       display: none;
     }
-  
+    
     .menu-toggle {
-      display: block;
+        display: block;
     }
-  
+    
     nav ul.show {
-      display: flex;
+        display: flex;
     }
   
     .projects-container {
