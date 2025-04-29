@@ -64,22 +64,22 @@
           <div class="project-card">
             <img src="https://via.placeholder.com/300" alt="Project Image">
             <h3>Project 1</h3>
-            <p>Description of your project goes here.</p>
+            <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
             <a href="https://github.com/prajapat04/porfolio" target="_blank">View on GitHub</a>
           </div>
       
           <div class="project-card">
             <img src="https://via.placeholder.com/300" alt="Project Image">
             <h3>Project 2</h3>
-            <p>Description of your project goes here.</p>
+            <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
             <a href="https://github.com/prajapat04/my-webpage" target="_blank">View on GitHub</a>
           </div>
       
           <div class="project-card">
             <img src="https://via.placeholder.com/300" alt="Project Image">
             <h3>Project 3</h3>
-            <p>Description of your project goes here.</p>
-            <a href="https://github.com/prajapat04/my-webpage" target="_blank">View on GitHub</a>
+            <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
+            <a href="https://github.com/prajapat04/my-webpage" target="_blank">Cheak out the code on GitHub</a>
           </div>
         </div>
       </section>
@@ -92,7 +92,26 @@
       </footer>
 
    <script src="script.js"></script>
-
+   <button id="scrollTopBtn" title="Go to top">⬆️</button>
+   <script>
+    let scrollTopBtn = document.getElementById("scrollTopBtn");
+  
+    // Show the button after scrolling down 100px
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+  
+    // When the user clicks the button, scroll to the top
+    scrollTopBtn.addEventListener('click', function() {
+      document.body.scrollTop = 0; 
+      document.documentElement.scrollTop = 0; 
+    });
+  </script>
+  
 
 </body>
 </html>
