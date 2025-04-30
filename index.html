@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My frist web page</title>
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
-    <nav>
+    <nav data-aos="fade-down">
        <ul> <a href="index.html">Home</a> 
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -18,8 +21,8 @@
         
     </nav>
     <main>
-    <h1>Hello I am Amit</h1>
-    <p>My goal is to become a Full Stack Developer!</p>
+    <h1 data-aos="zoom-in">Hello I am Amit</h1>
+    <p data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">My goal is to become a Full Stack Developer!</p>
     <h2>My Skills</h2>
 <ul>
   <li>HTML</li>
@@ -31,7 +34,7 @@
     <div id="welcomeMessage">Welcome to my webpage!</div>
     <button id="clickMeButton">Click Me!</button>
     <ul id="skillsList"></ul>
-     <form id="userForm">
+     <form id="userForm" data-aos="fade-up">
          <input  type="text" id="name" placeholder="Enter your name">
          <input  type="email" id="email" placeholder="Enter your email">
          <button type="submit">submit</button>
@@ -66,21 +69,21 @@
       <section class="projects">
         <h2>My Projects</h2>
         <div class="projects-container">
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in">
             <img src="https://via.placeholder.com/300" alt="Project Image">
             <h3>Project 1</h3>
             <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
             <a href="https://github.com/prajapat04/porfolio" target="_blank">View on GitHub</a>
           </div>
       
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in">
             <img src="https://via.placeholder.com/300" alt="Project Image">
             <h3>Project 2</h3>
             <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
             <a href="https://github.com/prajapat04/my-webpage" target="_blank">View on GitHub</a>
           </div>
       
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in">
             <img src="https://via.placeholder.com/300" alt="Project Image">
             <h3>Project 3</h3>
             <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
@@ -124,7 +127,12 @@
     });
   </script>
   
-  
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 
 </body>
 </html>
