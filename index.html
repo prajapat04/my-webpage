@@ -10,19 +10,28 @@
 
 </head>
 <body>
-    <nav data-aos="fade-down">
+  <nav class="navbar">
+    <div class="logo">My Website</div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button id="darkModeToggle">🌙</button>
+  </nav>  
+  <!-- <nav data-aos="fade-down">
        <ul class="nav-manu" id="mobileMenu"> 
         <a href="index.html">Home</a> 
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </ul>
-      <button id="darkModeToggle">🌙</button>
 
         <div class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
           ☰
         </div>
         
-    </nav>
+    </nav> -->
 
     <main>
     <h1 data-aos="zoom-in">Hello I am Amit</h1>
@@ -124,15 +133,14 @@
     });
  
   </script>
-  <script>
-    const toggle1 = document.getElementById("menuToggle");
-    const menu = document.getElementById("mobileMenu");
-  
-    toggle1.addEventListener("click", () => {
-      menu.classList.toggle("open");
-    });
-  
-  </script>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+</script>
   
   
   <!-- AOS JS -->
