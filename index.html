@@ -11,7 +11,8 @@
 </head>
 <body>
     <nav data-aos="fade-down">
-       <ul> <a href="index.html">Home</a> 
+       <ul class="nav-manu" id="mobileMenu"> 
+        <a href="index.html">Home</a> 
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </ul>
@@ -122,13 +123,17 @@
       document.documentElement.scrollTop = 0; 
     });
  
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.querySelector('nav ul');
-  
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
   </script>
+  <script>
+    const toggle1 = document.getElementById("menuToggle");
+    const menu = document.getElementById("mobileMenu");
+  
+    toggle1.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+  
+  </script>
+  
   
   <!-- AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
