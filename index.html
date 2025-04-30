@@ -15,11 +15,14 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </ul>
+      <button id="darkModeToggle">🌙</button>
+
         <div class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
           ☰
         </div>
         
     </nav>
+
     <main>
     <h1 data-aos="zoom-in">Hello I am Amit</h1>
     <p data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">My goal is to become a Full Stack Developer!</p>
@@ -35,8 +38,8 @@
     <button id="clickMeButton">Click Me!</button>
     <ul id="skillsList"></ul>
      <form id="userForm" data-aos="fade-up">
-         <input  type="text" id="name" placeholder="Enter your name">
-         <input  type="email" id="email" placeholder="Enter your email">
+         <input  type="text" id="name" placeholder="Enter your name" required />
+         <input  type="email" id="email" placeholder="Enter your email" required />
          <button type="submit">submit</button>
          
      </form>
@@ -69,21 +72,21 @@
       <section class="projects">
         <h2>My Projects</h2>
         <div class="projects-container">
-          <div class="project-card" data-aos="zoom-in">
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="600">
             <img src="https://via.placeholder.com/300" alt="Project Image">
             <h3>Project 1</h3>
             <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
             <a href="https://github.com/prajapat04/porfolio" target="_blank">View on GitHub</a>
           </div>
       
-          <div class="project-card" data-aos="zoom-in">
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
             <img src="https://via.placeholder.com/300" alt="Project Image">
             <h3>Project 2</h3>
             <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
             <a href="https://github.com/prajapat04/my-webpage" target="_blank">View on GitHub</a>
           </div>
       
-          <div class="project-card" data-aos="zoom-in">
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1400">
             <img src="https://via.placeholder.com/300" alt="Project Image">
             <h3>Project 3</h3>
             <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
@@ -132,6 +135,31 @@
 <script>
   AOS.init();
 </script>
+<script>
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // 1. Load saved mode from localStorage
+  if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark-mode");
+    toggle.textContent = "☀️";
+  }
+
+  // 2. Toggle mode and save preference
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("dark-mode", "enabled");
+      toggle.textContent = "☀️";
+    } else {
+      localStorage.setItem("dark-mode", "disabled");
+      toggle.textContent = "🌙";
+    }
+  });
+</script>
+
+
 
 
 </body>
