@@ -68,3 +68,43 @@ document.write("Year: " + year + "<br>");
 document.write("Learning JavaScript: " + isLearning);
 
 
+// Arithmetic Operators
+let a = 10, b = 5;
+console.log("Sum:", a + b);
+console.log("Difference:", a - b);
+console.log("Product:", a * b);
+console.log("Division:", a / b);
+
+// Comparison
+console.log("Is a > b?", a > b);
+
+// Logical Operators
+let isLoggedIn = true;
+let hasPermission = false;
+console.log("Access Granted:", isLoggedIn && hasPermission);
+
+// Conditional Statements
+let score = 75;
+if (score >= 90) {
+  console.log("Grade: A");
+} else if (score >= 75) {
+  console.log("Grade: B");
+} else {
+  console.log("Grade: C or lower");
+}
+
+// Ternary Example
+let age = 20;
+let canDrive = age >= 18 ? "Yes" : "No";
+console.log("Can drive?", canDrive);
+
+
+let frist = 9;
+
+if (frist%2 == 0 ){
+    console.log("even");
+}
+else {
+    console.log("odd")
+}
+
