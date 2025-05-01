@@ -56,35 +56,16 @@ if (cname && email){
 }
 };
 
-console.log("Hello, JavaScript!");
-
-
-let userName = "Prajapat";
-const year = 2025;
-var isLearning = true;
-
-document.write("Name: " + userName + "<br>");
-document.write("Year: " + year + "<br>");
-document.write("Learning JavaScript: " + isLearning);
 
 
 
-
-// Function Declaration
-function greet(name) {
-    return "Hello, " + name;
-  }
-  console.log(greet("Prajapat"));
   
   // Function Expression
   const multiply = function(x, y) {
     return x * y;
   };
   console.log("Multiply:", multiply(4, 5));
-  
-  // Arrow Function
-  const square = num => num * num;
-  console.log("Square:", square(6));
+
   
   // Scope Example
   let globalVar = "I'm global";
@@ -96,12 +77,57 @@ function greet(name) {
   checkScope();
   // console.log(localVar); // ❌ Uncaught ReferenceError
   
-  // Hoisting example
-  console.log(hoistedVar); // undefined (var is hoisted)
-  var hoistedVar = "This is hoisted";
-  
 
-  const calculateArea = function(a, b){
-    return a * b;
-  }
-  console.log(calculateArea(5, 5))
+  // Arrays
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]); // Access first element
+fruits.push("Mango");  // Add an element at the end
+console.log(fruits);
+
+// Loop through array using for loop
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+
+// Use map() to create a new array with fruit names in uppercase
+let upperFruits = fruits.map(fruit => fruit.toUpperCase());
+console.log(upperFruits);
+
+// Use filter() to find fruits that start with "B"
+let bFruits = fruits.filter(fruit => fruit.startsWith('B'));
+console.log(bFruits);
+
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sum); // Output: 15
+
+
+
+const fruitss = ["Apple", "Banana", "Cherry"];
+for (const fruit of fruitss) {
+  console.log(fruit);
+}
+
+const person = { name: "Alice", age: 25, city: "Kota" };
+for (const key in person) {
+  console.log(`${key}: ${person[key]}`);
+}
+
+const numberss = [1, 2, 3, 4];
+const squares = numberss.map(num => num * num);
+console.log(squares); // Output: [1, 4, 9, 16]
+
+const evenNumbers = numberss.filter(num => num % 2 === 0);
+console.log(evenNumbers);
+
+const transactions = [
+    { id: 1, amount: 150 },
+    { id: 2, amount: 250 },
+    { id: 3, amount: 300 },
+    { id: 4, amount: 100 }
+  ];
+  
+  const largeTransactions = transactions.filter(transaction => transaction.amount > 200);
+  console.log(largeTransactions);
+  
