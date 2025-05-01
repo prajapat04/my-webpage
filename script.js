@@ -5,6 +5,7 @@ document.getElementById("clickMeButton").addEventListener("click", function() {
 document.getElementById("clickMeButton").addEventListener("click", function() {
     document.getElementById("welcomeMessage").innerHTML = "You clicked the button!";
 });
+
 let skills = ["HTML", "CSS", "JavaScript", "React"];
 function displaySkills() {
     for (let i = 0; i < skills.length; i++) {
@@ -25,7 +26,7 @@ function displaySkillsOnPage() {
 }
 displaySkillsOnPage();  // Call the function to display on the page
 
-//stoage data of form in localstorage
+
 document.getElementById("userForm").addEventListener("submit", function(event){
     event.preventDefault();
 
@@ -36,7 +37,13 @@ let email = document.getElementById("email").value;
 localStorage.setItem("userName", name);
 localStorage.setItem("userEmail", email);
 
-alert("your info has been saved!");
+if (name === "" || email === "") {
+    alert("Please fill out all fields!");
+    return; // stop execution
+}
+else {
+   alert("your info has been saved!");
+}
 });
 
 window.onload = function() {
@@ -48,3 +55,16 @@ if (cname && email){
     document.getElementById("savedInfo").innerHTML = `Name: ${cname} <br> Email: ${email}`;
 }
 };
+
+console.log("Hello, JavaScript!");
+alert("Welcome to Day 16 of your journey!");
+
+let userName = "Prajapat";
+const year = 2025;
+var isLearning = true;
+
+document.write("Name: " + userName + "<br>");
+document.write("Year: " + year + "<br>");
+document.write("Learning JavaScript: " + isLearning);
+
+
