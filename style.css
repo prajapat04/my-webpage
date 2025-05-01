@@ -328,13 +328,11 @@ main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 999;
-    color: black;
-    height: 70px;
-    background-color: #333;
-    padding: 10px 20px;
   }
   
   .navbar .logo {
@@ -345,14 +343,10 @@ main {
   .navbar .nav-menu {
     list-style: none;
     display: flex;
-    margin-left: 20px;
-    gap: 10px;
   }
   
   .navbar .nav-menu li {
-    padding: 10px 20px;
-    border: none;
-    
+    margin-left: 20px;
   }
   
   .navbar .nav-menu li a {
@@ -375,7 +369,7 @@ main {
   #darkModeToggle {
     position: fixed;
     top: 10px;
-    right: 10px;
+    right: 0.5em;
     padding: 8px 12px;
     font-size: 1.2rem;
     background: none;
@@ -416,29 +410,28 @@ body.dark-mode textarea {
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
+    .menu-toggle {
+        display: block;
+      }
+    
+      .nav-menu {
+        position: absolute;
         top: 60px;
-        left:-250px;
-        width: 200px;
+        left: -1050px;
+        width: 100%;
         flex-direction: column;
         background-color: #333;
         transition: left 0.3s ease-in-out;
       }
     
-      .nav-menu li {
-        margin: 10px 0;
-        text-align: center;
+      .nav-menu.open {
+        left: 0;
       }
     
-    .menu-toggle {
-        display: block;
-    }
-    
-   
-    .nav-manu.open {
-        left: 0px;
-    }
+      .nav-menu li {
+        margin: 10px 10px;
+        text-align: center;
+      }
   
     .projects-container {
       flex-direction: column;
