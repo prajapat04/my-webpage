@@ -57,7 +57,7 @@ if (cname && email){
 };
 
 console.log("Hello, JavaScript!");
-alert("Welcome to Day 16 of your journey!");
+
 
 let userName = "Prajapat";
 const year = 2025;
@@ -68,43 +68,40 @@ document.write("Year: " + year + "<br>");
 document.write("Learning JavaScript: " + isLearning);
 
 
-// Arithmetic Operators
-let a = 10, b = 5;
-console.log("Sum:", a + b);
-console.log("Difference:", a - b);
-console.log("Product:", a * b);
-console.log("Division:", a / b);
-
-// Comparison
-console.log("Is a > b?", a > b);
-
-// Logical Operators
-let isLoggedIn = true;
-let hasPermission = false;
-console.log("Access Granted:", isLoggedIn && hasPermission);
-
-// Conditional Statements
-let score = 75;
-if (score >= 90) {
-  console.log("Grade: A");
-} else if (score >= 75) {
-  console.log("Grade: B");
-} else {
-  console.log("Grade: C or lower");
-}
-
-// Ternary Example
-let age = 20;
-let canDrive = age >= 18 ? "Yes" : "No";
-console.log("Can drive?", canDrive);
 
 
-let frist = 9;
+// Function Declaration
+function greet(name) {
+    return "Hello, " + name;
+  }
+  console.log(greet("Prajapat"));
+  
+  // Function Expression
+  const multiply = function(x, y) {
+    return x * y;
+  };
+  console.log("Multiply:", multiply(4, 5));
+  
+  // Arrow Function
+  const square = num => num * num;
+  console.log("Square:", square(6));
+  
+  // Scope Example
+  let globalVar = "I'm global";
+  function checkScope() {
+    let localVar = "I'm local";
+    console.log(globalVar); // Accessible
+    console.log(localVar);  // Accessible
+  }
+  checkScope();
+  // console.log(localVar); // ❌ Uncaught ReferenceError
+  
+  // Hoisting example
+  console.log(hoistedVar); // undefined (var is hoisted)
+  var hoistedVar = "This is hoisted";
+  
 
-if (frist%2 == 0 ){
-    console.log("even");
-}
-else {
-    console.log("odd")
-}
-
+  const calculateArea = function(a, b){
+    return a * b;
+  }
+  console.log(calculateArea(5, 5))
