@@ -106,12 +106,57 @@
       </section>
       
       
+      <h2>To-Do List</h2>
+      <input type="text" id="todoInput" placeholder="Enter a task">
+      <button onclick="addTodo()">Add</button>
+      <ul id="todoList"></ul>
+
+      
+      <h2>Image Swapper</h2>
+      <img id="image" src="https://via.placeholder.com/150" width="150">
+      <br>
+      <button onclick="changeImage('day')">Day Image</button>
+      <button onclick="changeImage('night')">Night Image</button>
 </main>
 
     <footer>
         <p>© 2025 Prajapat04. All Rights Reserved.</p>
       </footer>
 
+<script>
+function changeImage(mode) {
+    const image = document.getElementById("image");
+    if (mode === "day") {
+        image.src = "https://via.placeholder.com/150/ffffcc/000000?text=Day";
+    } else {
+        image.src = "https://via.placeholder.com/150/333333/ffffff?text=Night";
+    }
+}
+</script>
+
+      <script>
+      function addTodo() {
+          let input = document.getElementById("todoInput");
+          let value = input.value.trim();
+          if (value === "") return;
+      
+          let li = document.createElement("li");
+          li.textContent = value;
+      
+          let btn = document.createElement("button");
+          btn.textContent = "Delete";
+          btn.style.marginLeft = "10px";
+          btn.onclick = function() {
+              li.remove();
+          };
+      
+          li.appendChild(btn);
+          document.getElementById("todoList").appendChild(li);
+      
+          input.value = "";
+      }
+      </script>
+      
    <script src="script.js"></script>
    <button id="scrollTopBtn" title="Go to top" aria-label="Scroll to top">⬆️</button>
    <script>
