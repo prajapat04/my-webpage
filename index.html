@@ -124,79 +124,38 @@
       <p>Total item : <span id="counter"></span></p>
 
       <ul id="itemList"></ul>
+
+      <ul id="mainList">
+        <li>item 1</li>
+        <li>item 2
+          <ul>
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+          </ul>
+        </li>
+        <li>item 3 </li>
+      </ul>
+      <button id="highlightSubItems">Highlight Sub-items</button>
+      <div id="container">
+        <h2>Heading</h2>
+        <ul id="itemList">
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+      </div>
+      
+      
 </main>
 
     <footer>
         <p>© 2025 Prajapat04. All Rights Reserved.</p>
       </footer>
 
-<script>
-     const addBtn = document.getElementById("addItem");
-     const removeBtn = document.getElementById("removeItem");
-     const hightLightBtn = document.getElementById("highlight");
-     const list = document.getElementById("itemList");
-     const counter = document.getElementById("counter");
 
-    function updateCounter() {
-        counter.textContent = list.children.length;
-    }
-    addBtn.addEventListener("click", ()=> {
-      const li = document.createElement("li");
-      li.textContent = `item ${list.children.length + 1}`;
-      list.appendChild(li);
-      updateCounter();
-    });
-
-    removeBtn.addEventListener("click", ()=> {
-      if(list.lastElementChild){
-        list.removeChild(list.lastElementChild);
-        updateCounter();
-      }
-    });
-    hightLightBtn.addEventListener("click", ()=> {
-      const items = document.querySelectorAll("li");
-      items.forEach(item => item.classList.toggle("highlight"));
-    });
-//     highlightBtn.addEventListener("click", () => {
-//   const items = document.querySelectorAll("li");
-//   items.forEach(item => item.classList.toggle("highlight"));
-// });
-
-function changeImage(mode) {
-    const image = document.getElementById("image");
-    if (mode === "day") {
-        image.src = "https://via.placeholder.com/150/ffffcc/000000?text=Day";
-    } else {
-        image.src = "https://via.placeholder.com/150/333333/ffffff?text=Night";
-    }
-}
-</script>
-
-      <script>
-      function addTodo() {
-          let input = document.getElementById("todoInput");
-          let value = input.value.trim();
-          if (value === "") return;
       
-          let li = document.createElement("li");
-          li.textContent = value;
-      
-          let btn = document.createElement("button");
-          btn.textContent = "Delete";
-          btn.style.marginLeft = "10px";
-          btn.onclick = function() {
-              li.remove();
-          };
-      
-          li.appendChild(btn);
-          document.getElementById("todoList").appendChild(li);
-      
-          input.value = "";
-      }
-      </script>
-      
-   <script src="script.js"></script>
-   <button id="scrollTopBtn" title="Go to top" aria-label="Scroll to top">⬆️</button>
+      <button id="scrollTopBtn" title="Go to top" aria-label="Scroll to top">⬆️</button>
+      <script src="script.js"></script>
    <script>
     let scrollTopBtn = document.getElementById("scrollTopBtn");
   
@@ -216,14 +175,7 @@ function changeImage(mode) {
     });
  
   </script>
-<script>
-  const menuToggle = document.getElementById('menuToggle');
-  const navMenu = document.getElementById('navMenu');
 
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-  });
-</script>
   
   
   <!-- AOS JS -->
@@ -232,27 +184,7 @@ function changeImage(mode) {
   AOS.init();
 </script>
 <script>
-  const toggle = document.getElementById("darkModeToggle");
-  const body = document.body;
-
-  // 1. Load saved mode from localStorage
-  if (localStorage.getItem("dark-mode") === "enabled") {
-    body.classList.add("dark-mode");
-    toggle.textContent = "☀️";
-  }
-
-  // 2. Toggle mode and save preference
-  toggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("dark-mode", "enabled");
-      toggle.textContent = "☀️";
-    } else {
-      localStorage.setItem("dark-mode", "disabled");
-      toggle.textContent = "🌙";
-    }
-  });
+ 
 </script>
 
 
