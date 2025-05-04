@@ -117,6 +117,13 @@
       <br>
       <button onclick="changeImage('day')">Day Image</button>
       <button onclick="changeImage('night')">Night Image</button>
+
+      <button id="addItem">Add Item</button>
+      <button id="removeItem">Remove Item</button>
+      <button id="highlight">Highlight Item</button>
+      <p>Total item : <span id="counter"></span></p>
+
+      <ul id="itemList"></ul>
 </main>
 
     <footer>
@@ -124,6 +131,37 @@
       </footer>
 
 <script>
+     const addBtn = document.getElementById("addItem");
+     const removeBtn = document.getElementById("removeItem");
+     const hightLightBtn = document.getElementById("highlight");
+     const list = document.getElementById("itemList");
+     const counter = document.getElementById("counter");
+
+    function updateCounter() {
+        counter.textContent = list.children.length;
+    }
+    addBtn.addEventListener("click", ()=> {
+      const li = document.createElement("li");
+      li.textContent = `item ${list.children.length + 1}`;
+      list.appendChild(li);
+      updateCounter();
+    });
+
+    removeBtn.addEventListener("click", ()=> {
+      if(list.lastElementChild){
+        list.removeChild(list.lastElementChild);
+        updateCounter();
+      }
+    });
+    hightLightBtn.addEventListener("click", ()=> {
+      const items = document.querySelectorAll("li");
+      items.forEach(item => item.classList.toggle("highlight"));
+    });
+//     highlightBtn.addEventListener("click", () => {
+//   const items = document.querySelectorAll("li");
+//   items.forEach(item => item.classList.toggle("highlight"));
+// });
+
 function changeImage(mode) {
     const image = document.getElementById("image");
     if (mode === "day") {
