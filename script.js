@@ -66,12 +66,11 @@ console.log("JavaScript is working!");
 
  const fruits = ["apple", "banana", "cherry", "mango"];
  const fruitList = document.getElementById("fruitList");
- fruits.forEach(function(fruit, index){
-  console.log(`${index + 1}.${fruit}`);
+ fruits.forEach((fruit, i) => {
   const li = document.createElement("li");
-  li.innerText = fruit;
-  fruitList.appendChild(li);
- });
+  li.innerText = `${i + 1}.${fruit}`;
+ fruitList.appendChild(li);
+});
  
 
  const user = {
@@ -94,4 +93,113 @@ for(const user of users){
   let li = document.createElement("li");
   li.innerText = `${user.name} : ${user.age}`;
   document.getElementById("obj-list").appendChild(li);
+}
+
+const products = [
+  {name : "Lg", price: 45000},
+  {name : "Lenovo", price: 50000},
+  {name : "Dell", price: 55000},
+  {name : "Asus vivobook", price: 65000}
+];
+const productList = document.getElementById("product-list");
+
+products.forEach(product => {
+  const li = document.createElement("li");
+  li.innerText = `Name ${product.name} - Price ${product.price}`;
+
+  if(product.price > 20000){
+    li.style.color = "green";
+  } else {
+    li.style.color = "red";
+  }
+  productList.appendChild(li);
+});
+function filterExpensive() {
+  productList.innerHTML = "";
+  const expencive = products.filter(p => p.price > 50000);
+  if(expencive.length === 0){
+    const li = document.createElement("li");
+    li.innerText = "No product over 50000 found.";
+    li.style.color = "gray";
+    productList.appendChild(li);
+    return;
+  } 
+
+  expencive.forEach(product => {
+  const li = document.createElement("li");
+  li.innerText = `${product.name} price : ${product.price}`;
+  li.style.color = "blue";
+  productList.appendChild(li);
+});
+
+}
+
+
+function convertToCelsius(fahrenheit) {
+  return ((fahrenheit - 32) * 5 / 9).toFixed(2);
+}
+
+function convertToFahrenheit(celsius) {
+  return ((celsius * 9 / 5) + 32).toFixed(2);
+}
+
+function convertTemp() {
+  const temp = parseFloat(document.getElementById("temp-input").value);
+  const type = document.getElementById("conversion-type").value;
+  const output = document.getElementById("converted-output");
+
+  if (isNaN(temp)) {
+    output.innerText = "Please enter a valid number.";
+    output.style.color = "red";
+    return;
+  }
+
+  let result;
+  if (type === "toCelsius") {
+    result = convertToCelsius(temp);
+    output.innerText = `${temp}°F is ${result}°C`;
+  } else {
+    result = convertToFahrenheit(temp);
+    output.innerText = `${temp}°C is ${result}°F`;
+  }
+
+  output.style.color = "green";
+}
+
+
+function calculate() {
+  const num1 = parseFloat(document.getElementById("num1").value);
+  const num2 = parseFloat(document.getElementById("num2").value);
+  const opration = document.getElementById("operation").value;
+  const resultElement = document.getElementById("calc-result");
+
+  if(isNaN(num1) || isNaN(num2)){
+    resultElement.innerText = "Please enter valid numbers.";
+    resultElement.style.color = "red";
+    return;
+  }
+  
+  let result;
+  switch(opration){
+    case "add":
+      result = num1 + num2;
+      break;
+    case "subtract":
+      result = num1 - num2;
+      break;
+    case "multiply":
+      result = num1 * num2;
+      break;
+    case "divide":
+      if(num2 === 0){
+        resultElement.innerText = "Cannot divide by zero.";
+        resultElement.style.color = "red";
+        return;
+      }
+      result = num1 /num2;
+      break;
+  }
+  resultElement.innerText = `Result : ${result}`;
+  resultElement.style.color = "green";
+
 }
