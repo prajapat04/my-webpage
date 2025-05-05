@@ -3,192 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My frist web page</title>
+    <title>frist web page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">My Website</div>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="darkModeToggle">🌙</button>
-  </nav>  
-  <!-- <nav data-aos="fade-down">
-       <ul class="nav-manu" id="mobileMenu"> 
-        <a href="index.html">Home</a> 
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </ul>
-
-        <div class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-          ☰
+    <header>
+    <h1>hi i am Amit</h1>
+</header>
+<main>
+    <section>
+        <div class="container">
+        <p>become a full stack web Developer</p>
+    <img src="img/m1.png" alt="image">
+    <p>Now i start a new jounery for web Developer.
+    it has 60 day to complete my journey.</p>
+    <a href="https://via.placeholder.com/150"></a>
+    <button onclick="changeHeading()">Click Me</button>
+<h1 id="main-heading">Hello!</h1>
         </div>
-        
-    </nav> -->
+</section>
 
-    <main>
-    <h1 data-aos="zoom-in">Hello I am Amit</h1>
-    <p data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">My goal is to become a Full Stack Developer!</p>
-    <h2>My Skills</h2>
-<ul>
-  <li>HTML</li>
-  <li>CSS (learning now)</li>
-  <li>JavaScript (coming soon)</li>
-</ul>
-    <p>Check out my GitHub: <a href="https://github.com/prajapat04" target="_blank">Visit my GitHub</a></p>
-    <img src="https://firebasestorage.googleapis.com/v0/b/coddy-for-creators.appspot.com/o/courses%2FX5ybxTVELN2Bvmegdcgl%2FB1W4ovz1wpFwKXcrZmzV%2Finjected_t0?alt=media&token=799f5980-a8c4-43a6-82ca-1f8ba57a360f" alt="My Image">
-    <div id="welcomeMessage">Welcome to my webpage!</div>
-    <button id="clickMeButton">Click Me!</button>
-    <ul id="skillsList"></ul>
-     <form id="userForm" data-aos="fade-up">
-         <input  type="text" id="name" placeholder="Enter your name" required />
-         <input  type="email" id="email" placeholder="Enter your email" required />
-         <button type="submit">submit</button>
-         
-     </form>
-     <div id="savedInfo"></div>
 
-     <div class="profile-card">
-        <img src="https://via.placeholder.com/150" alt="Profile Picture">
-        <h2>Amit Prajapat</h2>
-        <p>Full Stack Developer | Learner</p>
-    </div>
-    <section class="cards-container">
-        <div class="card">
-          <img src="https://via.placeholder.com/300" alt="Card Image">
-          <h3>Card Title 1</h3>
-          <p>Card description goes here.</p>
-        </div>
-      
-        <div class="card">
-          <img src="img/m1.png" alt="Card Image">
-          <h3>Card Title 2</h3>
-          <p>Another card description goes here.</p>
-        </div>
-      
-        <div class="card">
-          <img src="img/m2.png" alt="Card Image">
-          <h3>Card Title 3</h3>
-          <p>Yet another card description here.</p>
-        </div>
-      </section>
-      <section class="projects">
-        <h2>My Projects</h2>
-        <div class="projects-container">
-          <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="600">
-            <img src="https://via.placeholder.com/300" alt="Project Image">
-            <h3>Project 1</h3>
-            <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
-            <a href="https://github.com/prajapat04/porfolio" target="_blank">View on GitHub</a>
-          </div>
-      
-          <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
-            <img src="https://via.placeholder.com/300" alt="Project Image">
-            <h3>Project 2</h3>
-            <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
-            <a href="https://github.com/prajapat04/my-webpage" target="_blank">View on GitHub</a>
-          </div>
-      
-          <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1400">
-            <img src="https://via.placeholder.com/300" alt="Project Image">
-            <h3>Project 3</h3>
-            <p>Built with HTML, CSS, and JavaScript. A simple portfolio website showcasing my work.</p>
-            <a href="https://github.com/prajapat04/my-webpage" target="_blank">Cheak out the code on GitHub</a>
-          </div>
-        </div>
-      </section>
-      
-      
-      <h2>To-Do List</h2>
-      <input type="text" id="todoInput" placeholder="Enter a task">
-      <button onclick="addTodo()">Add</button>
-      <ul id="todoList"></ul>
+<section>
+    <div class="container">
+   
+   <input type="text" id="name-input" placeholder="Enter your name">
+   <button onclick="showName()">submit</button>
+   <p id="greeting"></p>
+<h2 id="toggle-heading">Click the button to change my style</h2>
+<!-- <button onclick="toggleStyle()">Toggle sytle</button> -->
+<button id="style-toggle">Toggle Style</button>
 
-      
-      <h2>Image Swapper</h2>
-      <img id="image" src="https://via.placeholder.com/150" width="150">
-      <br>
-      <button onclick="changeImage('day')">Day Image</button>
-      <button onclick="changeImage('night')">Night Image</button>
-
-      <button id="addItem">Add Item</button>
-      <button id="removeItem">Remove Item</button>
-      <button id="highlight">Highlight Item</button>
-      <p>Total item : <span id="counter"></span></p>
-
-      <ul id="itemList"></ul>
-
-      <ul id="mainList">
-        <li>item 1</li>
-        <li>item 2
-          <ul>
-            <li>sub item 1</li>
-            <li>sub item 2</li>
-          </ul>
-        </li>
-        <li>item 3 </li>
-      </ul>
-      <button id="highlightSubItems">Highlight Sub-items</button>
-      <div id="container">
-        <h2>Heading</h2>
-        <ul id="itemList">
-          <li>Item One</li>
-          <li>Item Two</li>
-          <li>Item Three</li>
-        </ul>
-      </div>
-      
-      
+<p id="remove-me">let delete me now</p>
+<!-- <button onclick="removePra()">delete prag</button> -->
+<button id="remove-btn">Remove Paragraph</button>
+</div>
+</section>
+<section>
+    <div class="container">
+    <form id="contact-form">
+        <input type="text" id="username" placeholder="Enter your name" required />
+        <input type="text" id="email" placeholder="Enter your email" required />
+        <button type="submit">Submit</button>
+        <p id="form-response"></p>
+    </form>
+</div>
+</section>
+<footer><p>made by code crew</p></footer>
 </main>
-
-    <footer>
-        <p>© 2025 Prajapat04. All Rights Reserved.</p>
-      </footer>
-
-
-      
-      <button id="scrollTopBtn" title="Go to top" aria-label="Scroll to top">⬆️</button>
-      <script src="script.js"></script>
-   <script>
-    let scrollTopBtn = document.getElementById("scrollTopBtn");
-  
-    // Show the button after scrolling down 100px
-    window.onscroll = function() {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollTopBtn.style.display = "block";
-      } else {
-        scrollTopBtn.style.display = "none";
-      }
-    };
-  
-    // When the user clicks the button, scroll to the top
-    scrollTopBtn.addEventListener('click', function() {
-      document.body.scrollTop = 0; 
-      document.documentElement.scrollTop = 0; 
-    });
- 
-  </script>
-
-  
-  
-  <!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-<script>
- 
-</script>
-
-
-
+<script src="script.js"></script>
 
 </body>
 </html>
